@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Όροι Χρήσης - apodixxi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #ffffff;
+            color: #1f2937;
+            line-height: 1.8;
+        }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 24px;
+            font-weight: 800;
+            color: #0D9488;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #0D9488, #14b8a6);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #f3f4f6;
+            color: #374151;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        
+        .back-btn:hover {
+            background: #e5e7eb;
+        }
+        
+        /* Content */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 120px 24px 80px;
+        }
+        
+        .page-header {
+            margin-bottom: 48px;
+            padding-bottom: 24px;
+            border-bottom: 2px solid #0D9488;
+        }
+        
+        .page-header h1 {
+            font-size: 36px;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 8px;
+        }
+        
+        .page-header .subtitle {
+            font-size: 16px;
+            color: #6b7280;
+        }
+        
+        .update-date {
+            display: inline-block;
+            background: #f0fdfa;
+            color: #0D9488;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 32px;
+        }
+        
+        .intro {
+            font-size: 18px;
+            color: #374151;
+            margin-bottom: 40px;
+            padding: 24px;
+            background: #f9fafb;
+            border-radius: 12px;
+            border-left: 4px solid #0D9488;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .section h2 .number {
+            width: 36px;
+            height: 36px;
+            background: #0D9488;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        
+        .section p {
+            color: #4b5563;
+            margin-bottom: 16px;
+        }
+        
+        .section ul {
+            list-style: none;
+            margin-bottom: 16px;
+        }
+        
+        .section ul li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 16px;
+            color: #4b5563;
+        }
+        
+        .section ul li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 8px;
+            height: 8px;
+            background: #0D9488;
+            border-radius: 50%;
+        }
+        
+        .section ul li strong {
+            color: #111827;
+        }
+        
+        .highlight-box {
+            background: #f0fdfa;
+            border: 1px solid #99f6e4;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 24px 0;
+        }
+        
+        .highlight-box.warning {
+            background: #fef3c7;
+            border-color: #fcd34d;
+        }
+        
+        .highlight-box h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #0f766e;
+            margin-bottom: 8px;
+        }
+        
+        .highlight-box.warning h4 {
+            color: #92400e;
+        }
+        
+        .highlight-box p {
+            font-size: 14px;
+            color: #115e59;
+            margin: 0;
+        }
+        
+        .highlight-box.warning p {
+            color: #78350f;
+        }
+        
+        .contact-box {
+            background: linear-gradient(135deg, #0D9488, #0f766e);
+            color: white;
+            padding: 32px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 48px;
+        }
+        
+        .contact-box h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .contact-box a {
+            color: white;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+        
+        /* Footer */
+        .footer {
+            padding: 30px 24px;
+            background: #0a0a0a;
+            color: #9ca3af;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        .footer a {
+            color: #0D9488;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 28px;
+            }
+            
+            .section h2 {
+                font-size: 20px;
+            }
+            
+            .intro {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="/" class="logo">
+            <div class="logo-icon">🛒</div>
+            apodixxi
+        </a>
+        <a href="/" class="back-btn">← Αρχική</a>
+    </header>
+
+    <!-- Content -->
+    <main class="content">
+        <div class="page-header">
+            <h1>Όροι Χρήσης</h1>
+            <p class="subtitle">Terms of Use</p>
+        </div>
+        
+        <div class="update-date">📅 Τελευταία Ενημέρωση: Ιούνιος 2026</div>
+        
+        <div class="intro">
+            Καλώς ήρθατε στο <strong>apodixxi</strong>. Η πρόσβαση και η χρήση του ιστότοπου <strong>https://apodixxi.app</strong> και της ομώνυμης εφαρμογής για κινητά (διαθέσιμη για iOS και Android) υπόκεινται στους παρακάτω Όρους Χρήσης. Με τη λήψη, εγκατάσταση ή χρήση των Υπηρεσιών μας, αποδέχεστε πλήρως τους παρόντες όρους.
+        </div>
+
+        <div class="section">
+            <h2><span class="number">1</span> Άδεια Χρήσης</h2>
+            <p>Σας παραχωρούμε μια περιορισμένη, μη αποκλειστική, μη μεταβιβάσιμη και ανακλητή άδεια χρήσης της εφαρμογής apodixxi στη συσκευή σας, αυστηρά για προσωπική/επαγγελματική χρήση, σύμφωνα με τους παρόντες όρους.</p>
+            
+            <div class="highlight-box">
+                <h4>✅ Τι επιτρέπεται</h4>
+                <p>Χρήση της εφαρμογής για προσωπική παρακολούθηση αγορών, σάρωση αποδείξεων, και ανάλυση δαπανών.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><span class="number">2</span> Υποχρεώσεις Χρήστη</h2>
+            <p>Ως χρήστης συμφωνείτε ότι:</p>
+            <ul>
+                <li>Δεν θα χρησιμοποιήσετε την εφαρμογή ή τον ιστότοπο για παράνομους σκοπούς.</li>
+                <li>Δεν θα επιχειρήσετε να αλλοιώσετε, να αποκωδικοποιήσετε (reverse engineer) ή να παραβιάσετε την ασφάλεια της εφαρμογής και των διακομιστών της.</li>
+                <li>Είστε αποκλειστικά υπεύθυνοι για την ορθότητα της χρήσης του λογαριασμού σας και των αποδείξεων που καταχωρείτε.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span class="number">3</span> Πνευματικά Δικαιώματα</h2>
+            <p>Όλο το περιεχόμενο, τα λογότυπα (συμπεριλαμβανομένου του brand "apodixxi"), τα γραφικά, και ο κώδικας του ιστότοπου https://apodixxi.app και της εφαρμογής, αποτελούν πνευματική ιδιοκτησία μας και προστατεύονται από την ελληνική και διεθνή νομοθεσία περί πνευματικής ιδιοκτησίας.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="number">4</span> Αποποίηση Ευθυνών</h2>
+            <p>Η εφαρμογή apodixxi παρέχεται <strong>"ως έχει" (as is)</strong>.</p>
+            <p>Καταβάλλουμε κάθε δυνατή προσπάθεια για την ομαλή λειτουργία της και τη συνεχή ενημέρωσή της στα αντίστοιχα App Stores, ωστόσο δεν εγγυόμαστε ότι η λειτουργία της θα είναι αδιάλειπτη ή εντελώς απαλλαγμένη από σφάλματα.</p>
+            
+            <div class="highlight-box warning">
+                <h4>⚠️ Σημαντικό</h4>
+                <p>Δεν φέρουμε ευθύνη για τυχόν απώλεια δεδομένων από τη συσκευή σας.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><span class="number">5</span> Τροποποιήσεις</h2>
+            <p>Διατηρούμε το δικαίωμα να τροποποιήσουμε τους παρόντες Όρους Χρήσης ανά πάσα στιγμή. Η συνέχιση της χρήσης της εφαρμογής μετά την αλλαγή των Όρων συνιστά αποδοχή των νέων Όρων.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="number">6</span> Εφαρμοστέο Δίκαιο και Δικαιοδοσία</h2>
+            <p>Οι παρόντες όροι διέπονται από το <strong>Ελληνικό δίκαιο</strong>.</p>
+            <p>Για οποιαδήποτε διαφορά προκύψει από τη χρήση του ιστότοπου ή της εφαρμογής, αποκλειστικά αρμόδια είναι τα <strong>δικαστήρια των Αθηνών, Ελλάδα</strong>.</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="number">7</span> Επικοινωνία</h2>
+            <p>Για απορίες σχετικά με τους Όρους Χρήσης, παρακαλούμε επικοινωνήστε μαζί μας.</p>
+        </div>
+
+        <div class="contact-box">
+            <h3>📧 Επικοινωνία</h3>
+            <p>Για οποιαδήποτε απορία σχετικά με τους Όρους Χρήσης:</p>
+            <p><a href="mailto:support@apodixxi.app">support@apodixxi.app</a></p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 apodixxi. Με ❤️ από την Ελλάδα. | <a href="/">Αρχική</a> | <a href="/privacy">Πολιτική Απορρήτου</a></p>
+    </footer>
+</body>
+</html>
